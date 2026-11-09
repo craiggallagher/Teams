@@ -30,7 +30,7 @@ namespace Team.Api.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("CreateUrl")
+                    b.Property<string>("CrestUrl")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

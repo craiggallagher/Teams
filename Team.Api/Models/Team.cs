@@ -6,6 +6,6 @@
         public string Name { get; set; } = string.Empty;
         public int StadiumCapacity { get; set; }
         public DateOnly EstablishedDate { get; set; }
-        public string CreateUrl { get; set; } = string.Empty;
+        public string CrestUrl { get; set; } = string.Empty;
     }
 }

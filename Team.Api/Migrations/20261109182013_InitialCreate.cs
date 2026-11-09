@@ -20,7 +20,7 @@ namespace Team.Api.Migrations
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     StadiumCapacity = table.Column<int>(type: "int", nullable: false),
                     EstablishedDate = table.Column<DateOnly>(type: "date", nullable: false),
-                    CreateUrl = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    CrestUrl = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {

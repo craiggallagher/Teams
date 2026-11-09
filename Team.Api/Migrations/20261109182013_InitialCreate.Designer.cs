@@ -12,7 +12,7 @@ using Team.Api.Data;
 namespace Team.Api.Migrations
 {
     [DbContext(typeof(TeamDbContext))]
-    [Migration("20261109180810_InitialCreate")]
+    [Migration("20261109182013_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -33,7 +33,7 @@ namespace Team.Api.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("CreateUrl")
+                    b.Property<string>("CrestUrl")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
