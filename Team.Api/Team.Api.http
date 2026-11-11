@@ -4,3 +4,9 @@ GET {{Team.Api_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###
+GET {{Team.Api_HostAddress}}/api/teams/
+Accept: application/json
+###
+
+GET {{Team.Api_HostAddress}}/api/teams/1
+Accept: application/json
