@@ -10,3 +10,28 @@ Accept: application/json
 
 GET {{Team.Api_HostAddress}}/api/teams/1
 Accept: application/json
+###
+
+POST {{Team.Api_HostAddress}}/api/teams/
+Content-Type: application/json
+
+{
+    "name": "Arsenal",
+    "stadiumCapacity": 60000,
+    "establishedDate": "1886-10-01",
+    "crestUrl": "https://example.com/arsenal.png"
+}
+###
+
+DELETE {{Team.Api_HostAddress}}/api/teams/2
+###
+
+PUT {{Team.Api_HostAddress}}/api/teams/1
+Content-Type: application/json
+{
+    "id": 1,
+    "name": "Arsenal FC",
+    "stadiumCapacity": 60000,
+    "establishedDate": "1886-10-01",
+    "crestUrl": "https://example.com/arsenal.png"
+}

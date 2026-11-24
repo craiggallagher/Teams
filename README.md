@@ -23,7 +23,8 @@ The application will allow users to manage Premier League football teams, includ
 - [x] Team entity and database migrations
 - [x] Team DTOs
 - [x] Create, read teams
-- [ ] Update and delete teams
+- [x] Update and delete teams
+- [ ] DTO validation
 - [ ] WPF user interface
 - [ ] Connect WPF application to the API
 - [ ] Display club crests and team information

@@ -78,5 +78,44 @@ namespace Team.Api.Controllers
             };
             return CreatedAtAction(nameof(GetTeam), new { id = team.Id }, teamDto);
         }
+
+        [HttpDelete("{id}")]
+
+        public async Task<ActionResult<TeamDto>> DeleteTeam(int id)
+        {
+
+            var team = await _context.Teams.FindAsync(id);
+
+            if (team == null)
+            {
+                return NotFound();
+            }
+
+            _context.Teams.Remove(team);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
+
+        [HttpPut("{id}")]
+
+        public async Task<ActionResult<TeamDto>> UpdateTeam(int id, UpdateTeamDto updateTeamDto)
+        {
+            
+            var team = await _context.Teams.FindAsync(id);
+
+            if(team == null)
+            {
+                return NotFound();
+            }
+
+            team.Name = updateTeamDto.Name;
+            team.StadiumCapacity = updateTeamDto.StadiumCapacity; ;
+            team.EstablishedDate = updateTeamDto.EstablishedDate;
+            team.CrestUrl = updateTeamDto.CrestUrl;
+
+            await _context.SaveChangesAsync();
+            return NoContent(); 
+        }
     }
 }
