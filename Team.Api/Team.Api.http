@@ -16,10 +16,10 @@ POST {{Team.Api_HostAddress}}/api/teams/
 Content-Type: application/json
 
 {
-    "name": "Arsenal",
-    "stadiumCapacity": 60000,
-    "establishedDate": "1886-10-01",
-    "crestUrl": "https://example.com/arsenal.png"
+  "name": "",
+  "stadiumCapacity": -100,
+  "establishedDate": "1886-10-01",
+  "crestUrl": "not-a-valid-url"
 }
 ###
 
