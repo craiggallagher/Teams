@@ -16,10 +16,51 @@ POST {{Team.Api_HostAddress}}/api/teams/
 Content-Type: application/json
 
 {
+  "name": "Arsenal",
+  "stadiumCapacity": 60000,
+  "establishedDate": "1886-10-01",
+  "crestUrl": "https://example.com/futurefc.png"
+}
+###
+
+POST {{Team.Api_HostAddress}}/api/teams/
+Content-Type: application/json
+
+{
   "name": "",
   "stadiumCapacity": -100,
   "establishedDate": "1886-10-01",
   "crestUrl": "not-a-valid-url"
+}
+###
+
+POST {{Team.Api_HostAddress}}/api/teams/
+Content-Type: application/json
+{
+  "name": "Future FC",
+  "stadiumCapacity": 50000,
+  "establishedDate": "2030-01-01",
+  "crestUrl": "https://example.com/futurefc.png"
+
+}
+###
+
+POST {{Team.Api_HostAddress}}/api/teams/
+Content-Type: application/json
+{
+  "name": "No Date FC",
+  "stadiumCapacity": 50000,
+  "crestUrl": "https://example.com/futurefc.png"
+
+}
+###
+POST {{Team.Api_HostAddress}}/api/teams/
+Content-Type: application/json
+{
+  "name": "Valid FC",
+  "stadiumCapacity": 50000,
+  "establishedDate": "1886-10-01",
+  "crestUrl": "https://example.com/crest.png"
 }
 ###
 

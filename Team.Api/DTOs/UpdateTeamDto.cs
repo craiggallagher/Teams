@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Team.Api.Validation;
 namespace Team.Api.DTOs
 {
     public class UpdateTeamDto
@@ -9,7 +10,7 @@ namespace Team.Api.DTOs
         [Range(1, int.MaxValue)]
         public int StadiumCapacity { get; set; }
 
-        [Required]
+        [EstablishedDate]
         [DataType(DataType.Date)]
         public DateOnly EstablishedDate { get; set; }
 
